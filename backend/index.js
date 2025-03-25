@@ -23,7 +23,7 @@ app.use(urlencoded({
 }))
 
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: process.env.URL,
     credentials: true
 }
 app.use(cors(corsOptions));

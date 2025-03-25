@@ -43,7 +43,7 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      const newSocket = io('http://localhost:5100', {
+      const newSocket = io('https://insta-clone-daily-doses.onrender.com', {
         query: { userId: user?._id },
         transports: ['websocket'],
       });

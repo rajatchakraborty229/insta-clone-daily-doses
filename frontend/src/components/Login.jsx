@@ -34,7 +34,7 @@ function Login() {
     
         try {
             const res = await axios.post(
-                "http://localhost:5100/api/v1/user/login",
+                "https://insta-clone-daily-doses.onrender.com/api/v1/user/login",
                 input,
                 {
                     headers: { "Content-Type": "application/json" },

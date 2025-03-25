@@ -35,7 +35,7 @@ function CreatePost({ open, setOpen }) {
 
         try {
             setLoading(true)
-            const res = await axios.post("http://localhost:5100/api/v1/post/add", formData, {
+            const res = await axios.post("https://insta-clone-daily-doses.onrender.com/api/v1/post/add", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 },

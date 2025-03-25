@@ -20,7 +20,7 @@ function SignUp() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5100/api/v1/user/register", input, {
+      const res = await axios.post("https://insta-clone-daily-doses.onrender.com/api/v1/user/register", input, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });

@@ -34,7 +34,7 @@ function Post({ post }) {
   const handleDeletePost = async () => {
     try {
       setLoading(true)
-      const res = await axios.delete(`http://localhost:5100/api/v1/post/delete/${post._id}`, {
+      const res = await axios.delete(`https://insta-clone-daily-doses.onrender.com/api/v1/post/delete/${post._id}`, {
         withCredentials: true
       })
       if (res.data.success) {
@@ -52,7 +52,7 @@ function Post({ post }) {
     try {
       const action = liked ? 'dislike' : 'like';
       const res = await axios.post(
-        `http://localhost:5100/api/v1/post/${post?._id}/${action}`,
+        `https://insta-clone-daily-doses.onrender.com/api/v1/post/${post?._id}/${action}`,
         {}, // Empty object since we don't send data in the body
         { withCredentials: true } // Move this here
       );
@@ -76,7 +76,7 @@ function Post({ post }) {
 
   const handleComment = async () => {
     try {
-      const res = await axios.post(`http://localhost:5100/api/v1/post/${post._id}/comment`, { text }, {
+      const res = await axios.post(`https://insta-clone-daily-doses.onrender.com/api/v1/post/${post._id}/comment`, { text }, {
         headers: {
           "Content-Type": "application/json"
         },
@@ -99,7 +99,7 @@ function Post({ post }) {
   }
   const handleBookmark=async()=>{
     try{
-        const res=await axios.get(`http://localhost:5100/api/v1/post/bookmark/${post?._id}`,{
+        const res=await axios.get(`https://insta-clone-daily-doses.onrender.com/api/v1/post/bookmark/${post?._id}`,{
             withCredentials:true
         })
         if(res.data.success){
